@@ -1,0 +1,188 @@
+<div class="arliquid_body container p-0">
+    <div class="row p-0 m-0">
+        <div class="col-3 p-0 m-0 arliquid_aside_section">
+           <div class="arliquid_aside_heading d-flex justify-content-between">
+               <h6 class="arliquid_aside_inheading">Quote Content</h6>
+               <i  (click)="slicify()" class="uib-icon  uib-icon--edit arliquid_aside_inicon"></i>
+           </div>
+           <ul class="uib-list arliquid_aside_list">
+            <li class="uib-list__item arliquid_aside_active">
+              <a class="uib-list__link arliquid_aside_activetext" >{{aside_covername}}</a>
+            </li>
+            <li class="uib-list__item arliquid_aside_active">
+              <a class="uib-list__link arliquid_aside_activetext">{{aside_budgetarname}}</a>
+            </li>
+          </ul>
+          <div >
+
+          
+          <!-- ---------------------------------------------------------------------------------------------------- -->
+
+          <ul class="uib-list arliquid_aside_list" 
+                class="list"
+              cdkDropList
+              #todoList="cdkDropList"
+              [cdkDropListData]="pdfFiles"
+              (cdkDropListDropped)="onDrop($event)"
+          >
+          <li class="uib-list__item" *ngFor="let todo of pdfFiles; let i=index" cdkDrag>
+            <span  *ngIf="todo.id">
+            <a class="uib-list__link d-flex justify-content-between  arliquid_aside_inner" *ngIf="todo.id != 1 && todo.id != 2">
+              <!-- {{todo?.filename[0]?.name}} +++++++++ ------ -->
+
+              <span *ngIf="todo.id !=0 && todo.original_pdf_name">{{todo?.original_pdf_name}}</span>
+              <span *ngIf="todo.id !=0 && !todo.original_pdf_name">{{todo?.filename[0]?.name}}</span>
+            <div class="arliquid_aside_remove">
+              <button type="button" *ngIf="!asideCross && todo.original_pdf_name"  (click)="removeAside(todo.id,i,'optionalpdf',todo?.original_pdf_name)" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+              <button type="button" *ngIf="!asideCross && !todo.original_pdf_name"  (click)="removeAside(todo.id,i,'optionalpdf',todo?.filename[0]?.name)" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+            <div class="uib-drag-handle" *ngIf="asideCross"></div>
+            </div>
+          </a>
+          </span>
+         
+            <span *ngIf="!todo.id">
+            <a class="uib-list__link d-flex justify-content-between  arliquid_aside_inner">
+              {{todo?.original_pdf_name}}
+            <div class="arliquid_aside_remove">
+              <button type="button" *ngIf="!asideCross"  (click)="removeAside(todo?.mainid,i,'checkbox',todo?.original_pdf_name)" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+            <div class="uib-drag-handle" *ngIf="asideCross"></div>
+            </div>
+          </a>
+           </span>
+          </li>
+          <!-- dddd -->
+              
+        </ul>
+
+          <!-- ------------------------------------------------------------------------------------------------------- -->
+    </div>
+          <!-- ------ -->
+        </div>
+        <!--  -->
+        <div class="col-9 p-0 m-0 arliquid_center_section">
+            <ul class="nav nav-tabs arliquid_nav_tab" id="myTab" role="tablist">
+                <li class="nav-item arliquid_nav_item">
+                  <a class="nav-link active" id="document-tab" data-toggle="tab" href="#documentselection" role="tab" aria-controls="documentselection" aria-selected="true">Document Selection</a>
+                </li>
+                <li class="nav-item arliquid_nav_item" [ngStyle]="{'pointer-events': disabletab ? 'none' : 'inherit'}" >
+                  <a class="nav-link" href="#pdfpreview" id="pdf-tab" data-toggle="tab"  role="tab" aria-controls="pdfpreview" aria-selected="false" (click)="switchTab()">PDF Preview</a>
+                </li>
+              </ul>
+              
+              <div class="tab-content arliquid_tab_content" id="myTabContent" >
+                <div class="tab-pane fade show active" id="documentselection" role="tabpanel" aria-labelledby="document-tab">
+                  <!-- <ngx-doc-viewer url="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf" viewer="google"  style="width:100%;height:93vh;">
+                  </ngx-doc-viewer> -->
+                    <div class="arliquid_tab_section">
+                        <div class="col-6 mr-0 pr-0 arliquid_tab_section1">
+                          <!-- section 1 -->
+                            <div class="arliquid_tab_innerbody">
+                                <div class="artab_innerheading">
+                                    <h6 class="artab_innertext">Upload PDF document</h6>
+                                </div>
+                                <!-- inner section 1 -->
+                                <div class="artab_uploadcover"> 
+                                  <!-- aleart -->
+                                  <div *ngIf="pdfErr" class="alert alert-danger alert-dismissible fade show arliquid_pdf_aleart" role="alert">
+                                     {{pdfErrMsg}}
+                                    <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button> -->
+                                  </div>
+                                   <!-- aleart closed -->
+
+                                   <p class="artab_requiredtext">Required</p>
+                                   <div class="artab_innerrequire col-md-12"  *ngFor="let fieldname of uploadmainField; let i = index">
+                                     <div class="col-5 control-label">{{fieldname.name}}</div>
+                                     <div class="col-7 pl-0 ml-0">
+                                    <form>
+                                      <div class="form-group" >
+                                        <input type="file" accept=".pdf"  (change)="requiredInput(fieldname.unid,i,$event.target.files)" class="form-control-file cb-element" #documentinputFile>
+                                      </div>
+                                    </form>
+                                    </div>
+                                   </div>
+                                </div>
+                                  <!-- inner section 2 -->
+                                <div class="artab_uploadcover"> 
+                                  <p class="artab_requiredtext artab_text">Optional</p>
+                                  <div class="artab_innerrequire col-md-12">
+                                    <div class="col-12">
+                                     <div class="row" *ngFor="let fieldname of uploadpdfField; let i = index">
+                                        <div class="col-5 control-label">{{fieldname.name}}</div>
+                                        <div class="col-7 pl-0 ml-0">
+                                      <form>
+                                        <div class="form-group">
+                                          <input type="file"  accept=".pdf"  (change)="requiredInput(fieldname.unid,i,$event.target.files)" class="form-control-file cb-element"  #optionalinputFile>
+                                        </div>
+                                      </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <!-- insert additional field button -->
+                                     <div class="artab_insert_add col-12 text-center  ">
+                                       <a (click)="oninsertfield()">
+                                      <button type="button" class="uib-button uib-button--circular add_btn_circle">+</button>
+                                      <span  class="add_btn_circletext">Insert additional field</span>
+                                      </a>
+                                     </div>
+
+
+                                     <div class="artab_insert_additional col-12 text-right pb-3">
+                                      <div class="uib-actionbar add_btn" role="group">
+                                        <button type="button" class="uib-button uib-button--action add_btn_inner" (click)="submitPdf()" [disabled]="isProcess">
+                                          <span *ngIf="isMarged"><div class="loader" ></div></span>
+                                          <span  *ngIf="!isMarged">Save</span>
+                                        </button>
+                                      </div>
+                                      <!-- <button type="button" class="btn btn-primary" (click)="submitPdf()">Add</button> -->
+                                     </div>
+                                  </div>
+								  
+							                	<div class="clearfix"></div>
+                               </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-6 ml-0 pl-0 arliquid_tab_section2"  >
+                            <div class="arliquid_tab_innerbody1 mb-4" *ngFor="let Sec of newpdfdocs">
+                                <div class="artab_innerheading">
+                                    <h6 class="artab_innertext">{{Sec.section_type}}</h6>
+                                </div>
+                                <div class="uib-accordion" *ngFor="let newdata of Sec.main_modules">
+                                  <div class="uib-accordion__section">
+                                    <input class="uib-accordion__toggle" type="checkbox" id="{{newdata.mid}}" />
+                                    <label class="uib-accordion__label" for="{{newdata.mid}}">
+                                      {{newdata.module_name}}
+                                    </label>
+                                    <div class="uib-accordion__content">
+                                      <div class="uib-accordion__paragraph" *ngFor="let PDF of newdata.module_pdfs">
+                                        <!-- {{PDF.pdf_id}} -->
+                                        <label class="uib-accordion__title right-side-chk"><input type="checkbox"  id="tid{{PDF.pdf_id}}" [checked]="PDF.chk_status == 1" value="{{PDF.pdf_id}}"  (change)="checkCheckBoxvalue(PDF.pdf_id,PDF.pdf_type,PDF.pdf_file_name,PDF.pdf_folder_path,$event.target.value)"/> {{PDF.pdf_title}}</label>                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pdfpreview" role="tabpanel" aria-labelledby="pdf-tab" >
+                  <div class="col-12 text-center" *ngIf="previreloader"> 
+                  <div class="previewloader mx-auto"></div>
+                </div>
+                <!-- pdf preview -->
+                <!-- <div  *ngIf="managestate == 2" class="text-center"><span class="text-danger norecordmsg">Please save pdf before marge</span></div> -->
+                <!-- <div class="col-12" *ngIf="norecorMsg == '' && managestate != 2">  -->
+                <div class="col-12" *ngIf="norecorMsg == '' && uistatus == 0"> 
+                  <iframe [src]="urlSafe" width="100%" height="900px">
+                  </iframe>
+                </div>
+                <div  class="text-center"><span class="text-danger norecordmsg">{{norecorMsg}}</span></div>
+                <!-- <div  *ngIf="norecorMsg != ''" class="text-center"><span class="text-danger norecordmsg">{{norecorMsg}}</span></div> -->
+                </div>
+              </div>
+        </div>
+       <!-- </div> -->
+    </div>
+</div>

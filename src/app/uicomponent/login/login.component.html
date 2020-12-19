@@ -1,0 +1,63 @@
+<div class="loginbody_main">
+    <div class="login_bodyinner  d-flex justify-content-center align-items-center">
+        <div class="login_section d-flex  justify-content-center">
+            <div class="login_sectioninner">
+                <div class="login_headingtext text-center">
+                    <h1 class="login_heading_inner1">Dräger Safety</h1>
+                    <p class="login_heading_inner2">PDF Quote Packging Tool</p>
+                </div>
+                <div class="login_form mt-5">
+                    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+                        <!-- <div class="">
+                            <label>First Name</label>
+                            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submit && loginvalidate.username.errors }" />
+                            <div *ngIf="submit && loginvalidate.username.errors" class="invalid-feedback">
+                                <div *ngIf="loginvalidate.username.errors.required">First Name is required</div>
+                            </div>
+                        </div> -->
+                        <!-- *ngIf="!loginvalidate.username.errors && !loginvalidate.password.errors" -->
+                        <div class="text-danger text-center mb-2" >{{invalidloginMsg}}</div>
+                        <div class="uib-form-field">
+                            <div class="uib-textfield">
+                              <input
+                                class="uib-textfield__input form-control"
+                                type="text"
+                                placeholder="User name"
+                                value=""
+                                formControlName="username"
+                                [ngClass]="{'is-invalid': submit  && loginvalidate.username.errors}"
+                               />
+                              <span class="uib-textfield__validation-icon"></span>
+                              <div *ngIf="submit && loginvalidate.username.errors" class="invalid-feedback">
+                                <div *ngIf="loginvalidate.username.errors.required" class="err_text">Username is required</div>
+                            </div>
+                            </div>
+                            
+                          </div>
+                          <div class="uib-form-field">
+                            <div class="uib-textfield">
+                              <input
+                                class="uib-textfield__input form-control"
+                                type="password"
+                                placeholder="Password"
+                                value=""
+                                formControlName="password"
+                                [ngClass]="{'is-invalid': submit  && loginvalidate.password.errors}"
+                               />
+                              <span class="uib-textfield__validation-icon" ></span>
+                              <div *ngIf="submit && loginvalidate.password.errors" class="invalid-feedback">
+                                <div *ngIf="loginvalidate.password.errors.required" class="err_text">Password is required</div>
+                            </div>
+                            </div>
+                            <div ></div>
+                          </div>
+                     
+                        <div class="text-center mt-5">
+                        <button type="submit" class="uib-button uib-button--circular login_heading_btn">OK</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+    </div>
+</div>

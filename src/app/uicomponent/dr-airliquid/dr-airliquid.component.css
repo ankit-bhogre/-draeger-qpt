@@ -1,0 +1,66 @@
+.airliquid_main_content{
+    padding-top:110px;
+}
+.airliquid_main_inner1{
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 15px;
+    padding: 30px 30px;
+    min-width: 40%;
+}
+.airliquid_inner_text {
+    color: #54595C;
+    font-size: 19px;
+}
+.airliquid_content_inner {
+    padding-bottom: 15px;
+}
+.airliquid_newquote_form{
+    min-height: 180px;
+}
+.airliquid_heading{
+    margin: 40px 0px;
+}
+.airliquid_dropdown{
+    border: none;
+    background: none;
+    outline: none;
+}
+.airliquid_dropdown_icon {
+    font-size: 25px !important;
+    color: #54595C;
+}
+.airliquid_select_inner1{
+    border-top: 2px solid #D8DCE0;
+}
+.airliquid_select_inner {
+    border-bottom: 2px solid #D8DCE0;
+    border-left: 2px solid #D8DCE0;
+    border-right: 2px solid #D8DCE0;
+}
+.airliquid_select_inner:hover{
+    cursor: pointer;
+}
+.airliquid_select_text {
+    margin: 0;
+    font-size: 13px;
+    padding: 5px;
+    color: #54595C;
+}
+pdf-viewer {
+    display: block;
+    height: 100vh;
+  }
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

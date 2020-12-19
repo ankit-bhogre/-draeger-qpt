@@ -1,0 +1,43 @@
+<header class="arliquid container p-0">
+    <div class="arliquid_header_body">
+        <nav class="uib-menubar">
+            <div class="uib-menubar__logo">
+              <div  class="uib-logo"></div>
+            </div>
+            <div class="uib-menubar__title">
+              <p class="arliquid_menubar1_heading">PDF Quote Packaging Tool</p>
+            </div>
+            <div class="uib-menubar__global-functions"> 
+            </div>
+          </nav>
+          <!-- second section -->
+          <!-- arliquid_menubar2 -->
+          <nav class="uib-menubar arliquid_menubar2">
+            <div class="" *ngIf="headerTrue">
+              <a routerLink="">
+              <div  class="uib-logo"></div>
+              <i class="fa fa-home  arliquid_menubar2_icon1" aria-hidden="true"></i>
+            </a>
+            </div>
+            <div class="uib-menubar__title">
+              <p class="arliquid_menubar2_heading">
+                <!-- <span *ngIf="urlroute != '/login'">Air Liquide - PA07302020</span> -->
+                <span *ngIf="urlroute != '/login'">{{filename}}</span>
+                <span *ngIf="urlroute == '/login'">Login</span>
+              </p>
+            </div>
+            <div class="uib-menubar__global-functions" *ngIf="headerTrue">
+                <!-- <i class="uib-icon  uib-icon--user arliquid_menubar2_icon2" (click)="logOut()"></i> -->
+                <!--  -->
+                <div  class="dropdown"><button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="airliquid_dropdown"><i class="uib-icon  uib-icon--user arliquid_menubar2_icon2" ></i>
+                  <!-- <i  aria-hidden="true" class="fa fa-bars airliquid_dropdown_icon"></i> -->
+                </button><div aria-labelledby="dropdownMenuButton" class="dropdown-menu header_profile_icondropdown">
+                  <a class="dropdown-item" (click)="logOut()">Logout</a>
+                </div>
+              </div>
+                <!--  -->
+            </div>
+          </nav>
+          <div class="uib-safety-line" ></div>
+    </div>
+</header>

@@ -1,0 +1,3360 @@
+@charset "UTF-8";
+@font-face {
+  font-family: uib-iconfont;
+  src: url("../fonts/uib-iconfont.eot");
+  src: url("../fonts/uib-iconfont.eot?#iefix") format("embedded-opentype"), url("../fonts/uib-iconfont.ttf") format("truetype"), url("../fonts/uib-iconfont.svg#uib-iconfont") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+.uib-icon {
+  display: inline-block;
+  position: relative;
+  height: 1em;
+  width: 1em;
+  transform: translate(0, 0);
+  text-rendering: auto;
+  vertical-align: middle;
+  font: normal normal 400 14px/1 uib-iconfont;
+  font-size: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.uib-icon--size-xsmall {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.uib-icon--size-small {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+
+.uib-icon--size-medium {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+
+.uib-icon--size-large {
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+}
+
+.uib-icon--size-xlarge {
+  width: 64px;
+  height: 64px;
+  font-size: 64px;
+}
+
+[class*=uib-icon--] span::before {
+  z-index: 1;
+}
+
+[class*=uib-icon--] span::after {
+  z-index: 2;
+}
+
+[class*=uib-icon--]::before,
+[class*=uib-icon--]::after,
+[class*=uib-icon--] span::before,
+[class*=uib-icon--] span::after {
+  display: block;
+  position: absolute;
+  white-space: normal;
+  /* undo text hidden */
+  text-indent: 0;
+  speak: none;
+}
+
+.uib-icon--checkbox-active::before {
+  content: "";
+}
+
+.uib-icon--comment::before {
+  content: "";
+}
+
+.uib-icon--battery-defective::before {
+  content: "";
+}
+
+.uib-icon--battery-defective::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--battery-defective span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--metering-speed::before {
+  content: "";
+}
+
+.uib-icon--power-supply::before {
+  content: "";
+}
+
+.uib-icon--power-supply-restricted::before {
+  content: "";
+  color: #ffe600;
+}
+
+.uib-icon--power-supply-restricted::after {
+  content: "";
+}
+
+.uib-icon--keyboard::before {
+  content: "";
+}
+
+.uib-icon--keyboard-caps-lock::before {
+  content: "";
+}
+
+.uib-icon--bumptest::before {
+  content: "";
+}
+
+.uib-icon--freshair::before {
+  content: "";
+}
+
+.uib-icon--lifesignal::before {
+  content: "";
+}
+
+.uib-icon--lifesignal-off::before {
+  content: "";
+}
+
+.uib-icon--tube-on::before {
+  content: "";
+}
+
+.uib-icon--tube-off::before {
+  content: "";
+}
+
+.uib-icon--suffocation-twa::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--suffocation-twa::after {
+  content: "";
+}
+
+.uib-icon--suffocation-stel::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--suffocation-stel::after {
+  content: "";
+}
+
+.uib-icon--toxic-twa::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--toxic-twa::after {
+  content: "";
+}
+
+.uib-icon--toxic-stel::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--toxic-stel::after {
+  content: "";
+}
+
+.uib-icon--flammable-twa::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--flammable-twa::after {
+  content: "";
+}
+
+.uib-icon--flammable-stel::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--flammable-stel::after {
+  content: "";
+}
+
+.uib-icon--explosiv-twa::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--explosiv-twa::after {
+  content: "";
+}
+
+.uib-icon--explosiv-stel::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--explosiv-stel::after {
+  content: "";
+}
+
+.uib-icon--twa-alarm::before {
+  content: "";
+}
+
+.uib-icon--stel-alarm::before {
+  content: "";
+}
+
+.uib-icon--sensor-missing::before {
+  content: "";
+}
+
+.uib-icon--pid::before {
+  content: "";
+}
+
+.uib-icon--remote::before {
+  content: "";
+}
+
+.uib-icon--sensor-catex::before {
+  content: "";
+}
+
+.uib-icon--sensor-ec::before {
+  content: "";
+}
+
+.uib-icon--sensor-ir::before {
+  content: "";
+}
+
+.uib-icon--sensor-pid::before {
+  content: "";
+}
+
+.uib-icon--pdf::before {
+  content: "";
+}
+
+.uib-icon--photo::before {
+  content: "";
+}
+
+.uib-icon--one::before {
+  content: "";
+}
+
+.uib-icon--onehundred::before {
+  content: "";
+}
+
+.uib-icon--fta::before {
+  content: "";
+}
+
+.uib-icon--fta::after {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--no-attachment::before {
+  content: "";
+}
+
+.uib-icon--no-comment::before {
+  content: "";
+}
+
+.uib-icon--flag-report::before {
+  content: "";
+}
+
+.uib-icon--flag-report::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--ten-from-ten::before {
+  content: "";
+}
+
+.uib-icon--nine-from-ten::before {
+  content: "";
+}
+
+.uib-icon--eight-from-ten::before {
+  content: "";
+}
+
+.uib-icon--seven-from-ten::before {
+  content: "";
+}
+
+.uib-icon--six-from-ten::before {
+  content: "";
+}
+
+.uib-icon--five-from-ten::before {
+  content: "";
+}
+
+.uib-icon--four-from-ten::before {
+  content: "";
+}
+
+.uib-icon--three-from-ten::before {
+  content: "";
+}
+
+.uib-icon--two-from-ten::before {
+  content: "";
+}
+
+.uib-icon--one-from-ten::before {
+  content: "";
+}
+
+.uib-icon--toggle-button-act::before {
+  content: "";
+}
+
+.uib-icon--toggle-button-act::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--toggle-button-dis::before {
+  content: "";
+}
+
+.uib-icon--toggle-button-dis::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--radio-button-act::before {
+  content: "";
+}
+
+.uib-icon--radio-button-act::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--radio-button-dis::before {
+  content: "";
+}
+
+.uib-icon--checkbox-act::before {
+  content: "";
+}
+
+.uib-icon--checkbox-act::after {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--checkbox-dis::before {
+  content: "";
+}
+
+.uib-icon--zero-from-ten::before {
+  content: "";
+}
+
+.uib-icon--blow::before {
+  content: "";
+}
+
+.uib-icon--substances::before {
+  content: "";
+}
+
+.uib-icon--hot::before {
+  content: "";
+}
+
+.uib-icon--cold::before {
+  content: "";
+}
+
+.uib-icon--import-substance::before {
+  content: "";
+}
+
+.uib-icon--application-feedback::before {
+  content: "";
+}
+
+.uib-icon--warning-triangle::before {
+  content: "";
+}
+
+.uib-icon--device-configuration::before {
+  content: "";
+}
+
+.uib-icon--read-device-configuration::before {
+  content: "";
+}
+
+.uib-icon--update-device-configuration::before {
+  content: "";
+}
+
+.uib-icon--calibration::before {
+  content: "";
+}
+
+.uib-icon--measuring-accuracy::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--measuring-accuracy::after {
+  content: "";
+}
+
+.uib-icon--synchronize::before {
+  content: "";
+}
+
+.uib-icon--edit-configuration::before {
+  content: "";
+}
+
+.uib-icon--deadline-list::before {
+  content: "";
+}
+
+.uib-icon--emergency-stop::before {
+  content: "";
+}
+
+.uib-icon--visual-inspection::before {
+  content: "";
+}
+
+.uib-icon--testing::before {
+  content: "";
+}
+
+.uib-icon--test-results::before {
+  content: "";
+}
+
+.uib-icon--error-before-testing::before {
+  content: "";
+}
+
+.uib-icon--error-before-testing::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--error-before-testing span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--note-before-testing::before {
+  content: "";
+}
+
+.uib-icon--test::before {
+  content: "";
+}
+
+.uib-icon--relocate::before {
+  content: "";
+}
+
+.uib-icon--issue-articles::before {
+  content: "";
+}
+
+.uib-icon--return-articles::before {
+  content: "";
+}
+
+.uib-icon--barcode-scanner::before {
+  content: "";
+}
+
+.uib-icon--hierarchy::before {
+  content: "";
+}
+
+.uib-icon--module::before {
+  content: "";
+}
+
+.uib-icon--acknowledge::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--acknowledge::after {
+  content: "";
+}
+
+.uib-icon--acknowledge-all::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--acknowledge-all::after {
+  content: "";
+}
+
+.uib-icon--output-channel::before {
+  content: "";
+}
+
+.uib-icon--input-channel::before {
+  content: "";
+}
+
+.uib-icon--relay-interface-out::before {
+  content: "";
+}
+
+.uib-icon--EX-interface-in::before {
+  content: "";
+}
+
+.uib-icon--digital-interface-in::before {
+  content: "";
+}
+
+.uib-icon--interface-in-4-20::before {
+  content: "";
+}
+
+.uib-icon--identify::before {
+  content: "";
+}
+
+.uib-icon--pressure-relief::before {
+  content: "";
+}
+
+.uib-icon--manage-device-pool::before {
+  content: "";
+}
+
+.uib-icon--manage-compositions::before {
+  content: "";
+}
+
+.uib-icon--breathing-apparatus::before {
+  content: "";
+}
+
+.uib-icon--work-clothing::before {
+  content: "";
+}
+
+.uib-icon--resources::before {
+  content: "";
+}
+
+.uib-icon--extinguisher::before {
+  content: "";
+}
+
+.uib-icon--garage::before {
+  content: "";
+}
+
+.uib-icon--pump::before {
+  content: "";
+}
+
+.uib-icon--hose::before {
+  content: "";
+}
+
+.uib-icon--communication-tool::before {
+  content: "";
+}
+
+.uib-icon--spare-parts-depo::before {
+  content: "";
+}
+
+.uib-icon--new-workshop::before {
+  content: "";
+}
+
+.uib-icon--location::before {
+  content: "";
+}
+
+.uib-icon--favorites::before {
+  content: "";
+}
+
+.uib-icon--function-menu::before {
+  content: "";
+}
+
+.uib-icon--incoming-articles::before {
+  content: "";
+}
+
+.uib-icon--outgoing-articles::before {
+  content: "";
+}
+
+.uib-icon--catalog::before {
+  content: "";
+}
+
+.uib-icon--edit-service::before {
+  content: "";
+}
+
+.uib-icon--interlock-calibration::before {
+  content: "";
+}
+
+.uib-icon--service::before {
+  content: "";
+}
+
+.uib-icon--install-interlock::before {
+  content: "";
+}
+
+.uib-icon--violation-reset::before {
+  content: "";
+}
+
+.uib-icon--remove-interlock::before {
+  content: "";
+}
+
+.uib-icon--swap-interlock::before {
+  content: "";
+}
+
+.uib-icon--swap-car::before {
+  content: "";
+}
+
+.uib-icon--faucet::before {
+  content: "";
+}
+
+.uib-icon--medical::before {
+  content: "";
+}
+
+.uib-icon--sprinkler::before {
+  content: "";
+}
+
+.uib-icon--hydrant::before {
+  content: "";
+}
+
+.uib-icon--dangerous-goods-and-ecology::before {
+  content: "";
+}
+
+.uib-icon--building-and-objects::before {
+  content: "";
+}
+
+.uib-icon--gv-graph-view::before {
+  content: "";
+}
+
+.uib-icon--gv-graph-settings::before {
+  content: "";
+}
+
+.uib-icon--calender-day-view::before {
+  content: "";
+}
+
+.uib-icon--calender-week-view::before {
+  content: "";
+}
+
+.uib-icon--clothing::before {
+  content: "";
+}
+
+.uib-icon--alcotest-3820::before {
+  content: "";
+}
+
+.uib-icon--alcotest-5820::before {
+  content: "";
+}
+
+.uib-icon--alcotest-6820::before {
+  content: "";
+}
+
+.uib-icon--alcotest-7510::before {
+  content: "";
+}
+
+.uib-icon--accessoires::before {
+  content: "";
+}
+
+.uib-icon--HART-interface-in-4-20::before {
+  content: "";
+}
+
+.uib-icon--digital-interface-out::before {
+  content: "";
+}
+
+.uib-icon--interface-out-4-20::before {
+  content: "";
+}
+
+.uib-icon--HART-multidrop-interface-in::before {
+  content: "";
+}
+
+.uib-icon--modbus-interface-in::before {
+  content: "";
+}
+
+.uib-icon--modbus-interface-out::before {
+  content: "";
+}
+
+.uib-icon--profibus-interface-in::before {
+  content: "";
+}
+
+.uib-icon--profibus-interface-out::before {
+  content: "";
+}
+
+.uib-icon--foundation-fieldbus-interface-in::before {
+  content: "";
+}
+
+.uib-icon--foundation-fieldbus-interface-out::before {
+  content: "";
+}
+
+.uib-icon--foundation-fieldbus-interface-out-list::before {
+  content: "";
+}
+
+.uib-icon--overrange::before {
+  content: "";
+}
+
+.uib-icon--underrange::before {
+  content: "";
+}
+
+.uib-icon--slotcover::before {
+  content: "";
+}
+
+.uib-icon--unknown-modul::before {
+  content: "";
+}
+
+.uib-icon--long-distance-gate-way::before {
+  content: "";
+}
+
+.uib-icon--dw-hydraulic::before {
+  content: "";
+}
+
+.uib-icon--rope::before {
+  content: "";
+}
+
+.uib-icon--dw-electric-utilities::before {
+  content: "";
+}
+
+.uib-icon--dw-sling-gear::before {
+  content: "";
+}
+
+.uib-icon--dw-pneumatic::before {
+  content: "";
+}
+
+.uib-icon--harness::before {
+  content: "";
+}
+
+.uib-icon--dw-radiation-protection-device::before {
+  content: "";
+}
+
+.uib-icon--bridge-interface-in::before {
+  content: "";
+}
+
+.uib-icon--hysteresis::before {
+  content: "";
+}
+
+.uib-icon--insert-chip::before {
+  content: "";
+}
+
+.uib-icon--job-list::before {
+  content: "";
+}
+
+.uib-icon--create-new-job::before {
+  content: "";
+}
+
+.uib-icon--jobs-to-approve::before {
+  content: "";
+}
+
+.uib-icon--data-log::before {
+  content: "";
+}
+
+.uib-icon--substance::before {
+  content: "";
+}
+
+.uib-icon--number-building-units::before {
+  content: "";
+}
+
+.uib-icon--basement::before {
+  content: "";
+}
+
+.uib-icon--construction-method::before {
+  content: "";
+}
+
+.uib-icon--number-floors::before {
+  content: "";
+}
+
+.uib-icon--building-year::before {
+  content: "";
+}
+
+.uib-icon--saddle-roof::before {
+  content: "";
+}
+
+.uib-icon--danger-indoor::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--danger-indoor::after {
+  content: "";
+}
+
+.uib-icon--map::before {
+  content: "";
+}
+
+.uib-icon--floorplan::before {
+  content: "";
+}
+
+.uib-icon--gas-consumption::before {
+  content: "";
+}
+
+.uib-icon--start-flush::before {
+  content: "";
+}
+
+.uib-icon--gas-efficiency::before {
+  content: "";
+}
+
+.uib-icon--start-timer::before {
+  content: "";
+}
+
+.uib-icon--cost::before {
+  content: "";
+}
+
+.uib-icon--job-pool::before {
+  content: "";
+}
+
+.uib-icon--job-history::before {
+  content: "";
+}
+
+.uib-icon--my-jobs::before {
+  content: "";
+}
+
+.uib-icon--time-interval::before {
+  content: "";
+}
+
+.uib-icon--gas-patient::before {
+  content: "";
+}
+
+.uib-icon--eject-chip::before {
+  content: "";
+}
+
+.uib-icon--eject-chip::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--eject-chip span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--close-vent::before {
+  content: "";
+}
+
+.uib-icon--close-vent::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--open-vent::before {
+  content: "";
+}
+
+.uib-icon--open-vent::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--concentration::before {
+  content: "";
+}
+
+.uib-icon--compare-measurement::before {
+  content: "";
+}
+
+.uib-icon--adjust::before {
+  content: "";
+}
+
+.uib-icon--computer-chip::before {
+  content: "";
+}
+
+.uib-icon--upload-cloud::before {
+  content: "";
+}
+
+.uib-icon--switch-theme::before {
+  content: "";
+}
+
+.uib-icon--glove::before {
+  content: "";
+}
+
+.uib-icon--helmet::before {
+  content: "";
+}
+
+.uib-icon--favorite-default::before {
+  content: "";
+}
+
+.uib-icon--changelog::before {
+  content: "";
+}
+
+.uib-icon--rfid::before {
+  content: "";
+}
+
+.uib-icon--service-request::before {
+  content: "";
+}
+
+.uib-icon--bottle-price::before {
+  content: "";
+}
+
+.uib-icon--regard-1000::before {
+  content: "";
+}
+
+.uib-icon--regard-3000::before {
+  content: "";
+}
+
+.uib-icon--certificate-invalid::before {
+  content: "";
+}
+
+.uib-icon--certificate-invalid::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--certificate-invalid span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--certificate-warning::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--certificate-warning::after {
+  content: "";
+}
+
+.uib-icon--certificate-valid::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--certificate-valid::after {
+  content: "";
+}
+
+.uib-icon--product-comparison::before {
+  content: "";
+}
+
+.uib-icon--navigation-logfile-management::before {
+  content: "";
+}
+
+.uib-icon--go-to-assets::before {
+  content: "";
+}
+
+.uib-icon--warning::before {
+  content: "";
+}
+
+.uib-icon--alarm-1-v2::before {
+  content: "";
+}
+
+.uib-icon--alarm-2-v2::before {
+  content: "";
+}
+
+.uib-icon--no-location::before {
+  content: "";
+}
+
+.uib-icon--battery-5::before {
+  content: "";
+}
+
+.uib-icon--battery-4::before {
+  content: "";
+}
+
+.uib-icon--battery-3::before {
+  content: "";
+}
+
+.uib-icon--battery-2::before {
+  content: "";
+}
+
+.uib-icon--battery-1::before {
+  content: "";
+}
+
+.uib-icon--shut-down::before {
+  content: "";
+}
+
+.uib-icon--evacuation::before {
+  content: "";
+}
+
+.uib-icon--sos::before {
+  content: "";
+}
+
+.uib-icon--man-down-alarm::before {
+  content: "";
+}
+
+.uib-icon--user-intervall-event-warning::before {
+  content: "";
+}
+
+.uib-icon--user-intervall-event-error::before {
+  content: "";
+}
+
+.uib-icon--bumptest-intervall-event-warning::before {
+  content: "";
+}
+
+.uib-icon--bumptest-intervall-event-error::before {
+  content: "";
+}
+
+.uib-icon--battery-pre-alarm::before {
+  content: "";
+}
+
+.uib-icon--calibration-not-possible::before {
+  content: "";
+}
+
+.uib-icon--warm-up-warning::before {
+  content: "";
+}
+
+.uib-icon--underrange-warning-hpp::before {
+  content: "";
+}
+
+.uib-icon--temperature-high-low::before {
+  content: "";
+}
+
+.uib-icon--calibration-intervall-event::before {
+  content: "";
+}
+
+.uib-icon--blocking-alarm::before {
+  content: "";
+}
+
+.uib-icon--calibration-intervall-event-comp-channel::before {
+  content: "";
+}
+
+.uib-icon--instrument-error::before {
+  content: "";
+}
+
+.uib-icon--instrument-deactivated-by-x-dock-event::before {
+  content: "";
+}
+
+.uib-icon--instrument-pump-error::before {
+  content: "";
+}
+
+.uib-icon--rise-time-error::before {
+  content: "";
+}
+
+.uib-icon--pressure-leak-test::before {
+  content: "";
+}
+
+.uib-icon--pressure-leak-detected::before {
+  content: "";
+}
+
+.uib-icon--open-cylinder-value::before {
+  content: "";
+}
+
+.uib-icon--close-cylinder-value::before {
+  content: "";
+}
+
+.uib-icon--reduce-volume::before {
+  content: "";
+}
+
+.uib-icon--read-user-id-card::before {
+  content: "";
+}
+
+.uib-icon--detected-card-with-invalid-content::before {
+  content: "";
+}
+
+.uib-icon--manual-input::before {
+  content: "";
+}
+
+.uib-icon--xam-8000::before {
+  content: "";
+}
+
+.uib-icon--xpid-9000::before {
+  content: "";
+}
+
+.uib-icon--screenerpro-7000-tube::before {
+  content: "";
+}
+
+.uib-icon--screenerpro-7000-funnel::before {
+  content: "";
+}
+
+.uib-icon--collection::before {
+  content: "";
+}
+
+.uib-icon--collection-remove::before {
+  content: "";
+}
+
+.uib-icon--collection-add::before {
+  content: "";
+}
+
+.uib-icon--service-reports-online-app-icon::before {
+  content: "";
+}
+
+.uib-icon--hp-leaktest-query::before {
+  content: "";
+}
+
+.uib-icon--lp-leaktest-query::before {
+  content: "";
+}
+
+.uib-icon--no-leaks::before {
+  content: "";
+}
+
+.uib-icon--no-leaks::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--no-leaks span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--timed-out::before {
+  content: "";
+}
+
+.uib-icon--timed-out::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--timed-out span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--batterylevel-uncalibrated::before {
+  content: "";
+}
+
+.uib-icon--time-elapsed::before {
+  content: "";
+}
+
+.uib-icon--time-to-whistle::before {
+  content: "";
+}
+
+.uib-icon--pc-link-query::before {
+  content: "";
+}
+
+.uib-icon--pc-link-preparing::before {
+  content: "";
+}
+
+.uib-icon--pc-link-connected::before {
+  content: "";
+}
+
+.uib-icon--pc-link-connected::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--pc-link-connected span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--pc-link-disconnecting::before {
+  content: "";
+}
+
+.uib-icon--pc-link-disconnecting::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--pc-link-disconnecting span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--user-id-current-user-query::before {
+  content: "";
+}
+
+.uib-icon--user-id-ready::before {
+  content: "";
+}
+
+.uib-icon--user-id-ready::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--user-id-ready span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--user-id-reading::before {
+  content: "";
+}
+
+.uib-icon--reduced-alarm-volume-query::before {
+  content: "";
+}
+
+.uib-icon--absorber-absent::before {
+  content: "";
+}
+
+.uib-icon--new-absorber-Inserted::before {
+  content: "";
+}
+
+.uib-icon--absorber-refill-query::before {
+  content: "";
+}
+
+.uib-icon--absorber-not-expired::before {
+  content: "";
+}
+
+.uib-icon--absorber-not-expired::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--absorber-not-expired span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--absorber-Expired::before {
+  content: "";
+}
+
+.uib-icon--absorber-expired::after {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--absorber-expired span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--withdraw-pending::before {
+  content: "";
+}
+
+.uib-icon--withdraw-confirmed::before {
+  content: "";
+}
+
+.uib-icon--withdraw-confirmed::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--withdraw-confirmed span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--telemetry-communication-active::before {
+  content: "";
+}
+
+.uib-icon--telemetry-communication-active::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--telemetry-communication-active span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--telemetry-communication-lost::before {
+  content: "";
+}
+
+.uib-icon--telemetry-communication-lost::after {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--telemetry-communication-lost span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--telemetry-error::before {
+  content: "";
+}
+
+.uib-icon--telemetry-error::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--telemetry-error span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--motion-sensing-enabled::before {
+  content: "";
+}
+
+.uib-icon--motion-sensing-enabled::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--motion-sensing-enabled span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--motion-sensing-disabled::before {
+  content: "";
+}
+
+.uib-icon--motion-sensing-disabled::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--hp-leaktest::before {
+  content: "";
+}
+
+.uib-icon--lp-leaktest::before {
+  content: "";
+}
+
+.uib-icon--location-scan-required::before {
+  content: "";
+}
+
+.uib-icon--location-scan-failed::before {
+  content: "";
+}
+
+.uib-icon--location-scan-failed::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--location-scan-failed span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--location-scan-successful::before {
+  content: "";
+}
+
+.uib-icon--location-scan-successful::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--location-scan-successful span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--assistant-sensor::before {
+  content: "";
+}
+
+.uib-icon--inerting::before {
+  content: "";
+}
+
+.uib-icon--cloud::before {
+  content: "";
+}
+
+.uib-icon--package::before {
+  content: "";
+}
+
+.uib-icon--cps::before {
+  content: "";
+}
+
+.uib-icon--scsr::before {
+  content: "";
+}
+
+.uib-icon--test-eq::before {
+  content: "";
+}
+
+.uib-icon--scba::before {
+  content: "";
+}
+
+.uib-icon--bodyguard::before {
+  content: "";
+}
+
+.uib-icon--safer::before {
+  content: "";
+}
+
+.uib-icon--play::before {
+  content: "";
+}
+
+.uib-icon--pause::before {
+  content: "";
+}
+
+.uib-icon--stop::before {
+  content: "";
+}
+
+.uib-icon--jump-back::before {
+  content: "";
+}
+
+.uib-icon--jump-forward::before {
+  content: "";
+}
+
+.uib-icon--rewind::before {
+  content: "";
+}
+
+.uib-icon--fast-forward::before {
+  content: "";
+}
+
+.uib-icon--volume::before {
+  content: "";
+}
+
+.uib-icon--mute::before {
+  content: "";
+}
+
+.uib-icon--microphone::before {
+  content: "";
+}
+
+.uib-icon--snapshot::before {
+  content: "";
+}
+
+.uib-icon--start-recording::before {
+  content: "";
+}
+
+.uib-icon--display-1::before {
+  content: "";
+}
+
+.uib-icon--display-2::before {
+  content: "";
+}
+
+.uib-icon--display-3::before {
+  content: "";
+}
+
+.uib-icon--display-4::before {
+  content: "";
+}
+
+.uib-icon--display-5::before {
+  content: "";
+}
+
+.uib-icon--volume-1::before {
+  content: "";
+}
+
+.uib-icon--volume-2::before {
+  content: "";
+}
+
+.uib-icon--day-mode::before {
+  content: "";
+}
+
+.uib-icon--night-mode::before {
+  content: "";
+}
+
+.uib-icon--Brightness-1::before {
+  content: "";
+}
+
+.uib-icon--Brightness-2::before {
+  content: "";
+}
+
+.uib-icon--Brightness-3::before {
+  content: "";
+}
+
+.uib-icon--Brightness-4::before {
+  content: "";
+}
+
+.uib-icon--Brightness-5::before {
+  content: "";
+}
+
+.uib-icon--volume-min::before {
+  content: "";
+}
+
+.uib-icon--volume-max::before {
+  content: "";
+}
+
+.uib-icon--new::before {
+  content: "";
+}
+
+.uib-icon--open::before {
+  content: "";
+}
+
+.uib-icon--close::before {
+  content: "";
+}
+
+.uib-icon--close-all::before {
+  content: "";
+}
+
+.uib-icon--close-all::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--save::before {
+  content: "";
+}
+
+.uib-icon--save-as::before {
+  content: "";
+}
+
+.uib-icon--import::before {
+  content: "";
+}
+
+.uib-icon--export::before {
+  content: "";
+}
+
+.uib-icon--export-to-excel::before {
+  content: "";
+}
+
+.uib-icon--send::before {
+  content: "";
+}
+
+.uib-icon--print::before {
+  content: "";
+}
+
+.uib-icon--print-preview::before {
+  content: "";
+}
+
+.uib-icon--print-configuration::before {
+  content: "";
+}
+
+.uib-icon--print-from-selection::before {
+  content: "";
+}
+
+.uib-icon--exit-program::before {
+  content: "";
+}
+
+.uib-icon--delete::before {
+  content: "";
+}
+
+.uib-icon--folder-open::before {
+  content: "";
+}
+
+.uib-icon--folder-close::before {
+  content: "";
+}
+
+.uib-icon--picture::before {
+  content: "";
+}
+
+.uib-icon--report::before {
+  content: "";
+}
+
+.uib-icon--index-card::before {
+  content: "";
+}
+
+.uib-icon--analysis::before {
+  content: "";
+}
+
+.uib-icon--data-set::before {
+  content: "";
+}
+
+.uib-icon--not-send::before {
+  content: "";
+}
+
+.uib-icon--not-send::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--not-send span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--table::before {
+  content: "";
+}
+
+.uib-icon--line-graph::before {
+  content: "";
+}
+
+.uib-icon--various-graphs::before {
+  content: "";
+}
+
+.uib-icon--alarms-per-type::before {
+  content: "";
+}
+
+.uib-icon--sent::before {
+  content: "";
+}
+
+.uib-icon--sending::before {
+  content: "";
+}
+
+.uib-icon--resend::before {
+  content: "";
+}
+
+.uib-icon--share::before {
+  content: "";
+}
+
+.uib-icon--file-pdf::before {
+  content: "";
+}
+
+.uib-icon--file-word::before {
+  content: "";
+}
+
+.uib-icon--file-ppt::before {
+  content: "";
+}
+
+.uib-icon--file-zip::before {
+  content: "";
+}
+
+.uib-icon--file-excel::before {
+  content: "";
+}
+
+.uib-icon--send-data::before {
+  content: "";
+}
+
+.uib-icon--newsletter::before {
+  content: "";
+}
+
+.uib-icon--partner-care::before {
+  content: "";
+}
+
+.uib-icon--alarm-info::before {
+  content: "";
+}
+
+.uib-icon--file-html::before {
+  content: "";
+}
+
+.uib-icon--download::before {
+  content: "";
+}
+
+.uib-icon--printer-not-available::before {
+  content: "";
+}
+
+.uib-icon--printer-not-available::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--printer-not-available span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--printing-finished::before {
+  content: "";
+}
+
+.uib-icon--mobile-device-not-available::before {
+  content: "";
+}
+
+.uib-icon--mobile-device-not-available::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--mobile-device-not-available span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--mobile-device-connected::before {
+  content: "";
+}
+
+.uib-icon--device-removed::before {
+  content: "";
+}
+
+.uib-icon--upload::before {
+  content: "";
+}
+
+.uib-icon--print-warning::before {
+  content: "";
+}
+
+.uib-icon--print-warning::after {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--print-warning span::before {
+  content: "";
+  color: #000000;
+}
+
+.uib-icon--restore::before {
+  content: "";
+}
+
+.uib-icon--undo::before {
+  content: "";
+}
+
+.uib-icon--reset-to-default::before {
+  content: "";
+}
+
+.uib-icon--cut::before {
+  content: "";
+}
+
+.uib-icon--copy::before {
+  content: "";
+}
+
+.uib-icon--insert::before {
+  content: "";
+}
+
+.uib-icon--edit::before {
+  content: "";
+}
+
+.uib-icon--remove::before {
+  content: "";
+}
+
+.uib-icon--duplicate::before {
+  content: "";
+}
+
+.uib-icon--left-arrow::before {
+  content: "";
+}
+
+.uib-icon--right-arrow::before {
+  content: "";
+}
+
+.uib-icon--up-arrow::before {
+  content: "";
+}
+
+.uib-icon--down-arrow::before {
+  content: "";
+}
+
+.uib-icon--counterclockwise-90-degree::before {
+  content: "";
+}
+
+.uib-icon--clockwise-90-degree::before {
+  content: "";
+}
+
+.uib-icon--lock::before {
+  content: "";
+}
+
+.uib-icon--unlock::before {
+  content: "";
+}
+
+.uib-icon--edit-test::before {
+  content: "";
+}
+
+.uib-icon--edit-user::before {
+  content: "";
+}
+
+.uib-icon--wizard::before {
+  content: "";
+}
+
+.uib-icon--reorganisation::before {
+  content: "";
+}
+
+.uib-icon--collective-modification::before {
+  content: "";
+}
+
+.uib-icon--calculate::before {
+  content: "";
+}
+
+.uib-icon--save-search-request::before {
+  content: "";
+}
+
+.uib-icon--activate-search-request::before {
+  content: "";
+}
+
+.uib-icon--group::before {
+  content: "";
+}
+
+.uib-icon--keyboard-delete::before {
+  content: "";
+}
+
+.uib-icon--keyboard-shift::before {
+  content: "";
+}
+
+.uib-icon--database::before {
+  content: "";
+}
+
+.uib-icon--database-edit::before {
+  content: "";
+}
+
+.uib-icon--attach-file::before {
+  content: "";
+}
+
+.uib-icon--hide-keyboard::before {
+  content: "";
+}
+
+.uib-icon--view::before {
+  content: "";
+}
+
+.uib-icon--erase::before {
+  content: "";
+}
+
+.uib-icon--date-time::before {
+  content: "";
+}
+
+.uib-icon--language::before {
+  content: "";
+}
+
+.uib-icon--history::before {
+  content: "";
+}
+
+.uib-icon--log-off::before {
+  content: "";
+}
+
+.uib-icon--log-off::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--log-off span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--log-in::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--log-in::after {
+  content: "";
+}
+
+.uib-icon--user-group-administration::before {
+  content: "";
+}
+
+.uib-icon--user-administration::before {
+  content: "";
+}
+
+.uib-icon--calendar::before {
+  content: "";
+}
+
+.uib-icon--online-mode::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--online-mode::after {
+  content: "";
+}
+
+.uib-icon--offline-mode::before {
+  content: "";
+}
+
+.uib-icon--hardware-available::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--hardware-available::after {
+  content: "";
+}
+
+.uib-icon--hardware-missing::before {
+  content: "";
+}
+
+.uib-icon--password::before {
+  content: "";
+}
+
+.uib-icon--address::before {
+  content: "";
+}
+
+.uib-icon--add-settings::before {
+  content: "";
+}
+
+.uib-icon--reduce-settings::before {
+  content: "";
+}
+
+.uib-icon--enter-config-mode::before {
+  content: "";
+}
+
+.uib-icon--leave-config-mode::before {
+  content: "";
+}
+
+.uib-icon--change-password::before {
+  content: "";
+}
+
+.uib-icon--time::before {
+  content: "";
+}
+
+.uib-icon--create-log-in-pin::before {
+  content: "";
+}
+
+.uib-icon--reset-settings::before {
+  content: "";
+}
+
+.uib-icon--reset-settings::after {
+  content: "";
+  color: #e6141e;
+}
+
+.uib-icon--reset-settings span::before {
+  content: "";
+  color: #ffffff;
+}
+
+.uib-icon--enter-settings::before {
+  content: "";
+}
+
+.uib-icon--leave-settings::before {
+  content: "";
+}
+
+.uib-icon--ok::before {
+  content: "";
+}
+
+.uib-icon--yes::before {
+  content: "";
+}
+
+.uib-icon--no::before {
+  content: "";
+}
+
+.uib-icon--feedback-positive::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--feedback-positive::after {
+  content: "";
+}
+
+.uib-icon--feedback-negative::before {
+  content: "";
+}
+
+.uib-icon--error::before {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--error::after {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--warning::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--warning::after {
+  content: "";
+}
+
+.uib-icon--battery-100-percent::before {
+  content: "";
+}
+
+.uib-icon--battery-75-percent::before {
+  content: "";
+}
+
+.uib-icon--battery-50-percent::before {
+  content: "";
+}
+
+.uib-icon--battery-25-percent::before {
+  content: "";
+}
+
+.uib-icon--battery-low::before {
+  content: "";
+}
+
+.uib-icon--signal::before {
+  content: "";
+}
+
+.uib-icon--process::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-100-percent::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-75-percent::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-50-percent::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-25-percent::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-low::before {
+  content: "";
+}
+
+.uib-icon--sensor-100-percent::before {
+  content: "";
+}
+
+.uib-icon--sensor-75-percent::before {
+  content: "";
+}
+
+.uib-icon--sensor-50-percent::before {
+  content: "";
+}
+
+.uib-icon--sensor-25-percent::before {
+  content: "";
+}
+
+.uib-icon--sensor-low::before {
+  content: "";
+}
+
+.uib-icon--prepreassure-low::before {
+  content: "";
+}
+
+.uib-icon--prepreassure-low::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--prepreassure-ok::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--prepreassure-ok::after {
+  content: "";
+}
+
+.uib-icon--prepreassure-high::before {
+  content: "";
+}
+
+.uib-icon--prepreassure-high::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--inhibit::before {
+  content: "";
+}
+
+.uib-icon--relay-switch-open::before {
+  content: "";
+}
+
+.uib-icon--relay-switch-closed::before {
+  content: "";
+}
+
+.uib-icon--prepressure-pending::before {
+  content: "";
+}
+
+.uib-icon--plus::before {
+  content: "";
+}
+
+.uib-icon--practice::before {
+  content: "";
+}
+
+.uib-icon--hot-practice::before {
+  content: "";
+}
+
+.uib-icon--operation::before {
+  content: "";
+}
+
+.uib-icon--hot-operation::before {
+  content: "";
+}
+
+.uib-icon--alarm::before {
+  content: "";
+}
+
+.uib-icon--commfail::before {
+  content: "";
+}
+
+.uib-icon--timer-on::before {
+  content: "";
+}
+
+.uib-icon--battery-loading::before {
+  content: "";
+}
+
+.uib-icon--funk-100-percent::before {
+  content: "";
+}
+
+.uib-icon--funk-75-percent::before {
+  content: "";
+}
+
+.uib-icon--funk-50-percent::before {
+  content: "";
+}
+
+.uib-icon--funk-25-percent::before {
+  content: "";
+}
+
+.uib-icon--funk-0-percent::before {
+  content: "";
+}
+
+.uib-icon--communication::before {
+  content: "";
+}
+
+.uib-icon--suffocation::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--suffocation::after {
+  content: "";
+}
+
+.uib-icon--suffocation-a1::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--suffocation-a1::after {
+  content: "";
+}
+
+.uib-icon--suffocation-a2::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--suffocation-a2::after {
+  content: "";
+}
+
+.uib-icon--temperature-low::before {
+  content: "";
+}
+
+.uib-icon--temperature-high::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-information::before {
+  content: "";
+}
+
+.uib-icon--gasbottle-warning::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--gasbottle-warning::after {
+  content: "";
+}
+
+.uib-icon--sensor-information::before {
+  content: "";
+}
+
+.uib-icon--sensor-warning::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--sensor-warning::after {
+  content: "";
+}
+
+.uib-icon--sensor-error::before {
+  content: "";
+}
+
+.uib-icon--sensor-error::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--sensor-error span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--sensor-overheat::before {
+  content: "";
+}
+
+.uib-icon--disabled::before {
+  content: "";
+}
+
+.uib-icon--ok-to-all::before {
+  content: "";
+}
+
+.uib-icon--ok-to-all::after {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--flammable::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--flammable::after {
+  content: "";
+}
+
+.uib-icon--flammable-a1::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--flammable-a1::after {
+  content: "";
+}
+
+.uib-icon--flammable-a2::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--flammable-a2::after {
+  content: "";
+}
+
+.uib-icon--toxic::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--toxic::after {
+  content: "";
+}
+
+.uib-icon--toxic-a1::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--toxic-a1::after {
+  content: "";
+}
+
+.uib-icon--toxic-a2::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--toxic-a2::after {
+  content: "";
+}
+
+.uib-icon--explosive::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--explosive::after {
+  content: "";
+}
+
+.uib-icon--explosive::before {
+  content: "";
+}
+
+.uib-icon--explosive-a1::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--explosive-a1::after {
+  content: "";
+}
+
+.uib-icon--explosive-a2::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--explosive-a2::after {
+  content: "";
+}
+
+.uib-icon--deadman::before {
+  content: "";
+}
+
+.uib-icon--coil-energized::before {
+  content: "";
+}
+
+.uib-icon--coil-not-energized::before {
+  content: "";
+}
+
+.uib-icon--alarm-1::before {
+  content: "";
+}
+
+.uib-icon--alarm-2::before {
+  content: "";
+}
+
+.uib-icon--alarm-3::before {
+  content: "";
+}
+
+.uib-icon--alarm-4::before {
+  content: "";
+}
+
+.uib-icon--average-alarm::before {
+  content: "";
+}
+
+.uib-icon--average-alarm-1::before {
+  content: "";
+}
+
+.uib-icon--average-alarm-2::before {
+  content: "";
+}
+
+.uib-icon--average-alarm-3::before {
+  content: "";
+}
+
+.uib-icon--average-alarm-4::before {
+  content: "";
+}
+
+.uib-icon--minimize::before {
+  content: "";
+}
+
+.uib-icon--rebuild::before {
+  content: "";
+}
+
+.uib-icon--maximize::before {
+  content: "";
+}
+
+.uib-icon--bluetooth-on::before {
+  content: "";
+}
+
+.uib-icon--bluetooth-off::before {
+  content: "";
+}
+
+.uib-icon--pairing::before {
+  content: "";
+}
+
+.uib-icon--phone::before {
+  content: "";
+}
+
+.uib-icon--pump-100-percent::before {
+  content: "";
+}
+
+.uib-icon--pump-75-percent::before {
+  content: "";
+}
+
+.uib-icon--pump-50-percent::before {
+  content: "";
+}
+
+.uib-icon--pump-25-percent::before {
+  content: "";
+}
+
+.uib-icon--pump-low::before {
+  content: "";
+}
+
+.uib-icon--signal-100-percent::before {
+  content: "";
+}
+
+.uib-icon--signal-75-percent::before {
+  content: "";
+}
+
+.uib-icon--signal-50-percent::before {
+  content: "";
+}
+
+.uib-icon--signal-25-percent::before {
+  content: "";
+}
+
+.uib-icon--signal-0-percent::before {
+  content: "";
+}
+
+.uib-icon--feedback-warning::before {
+  content: "";
+  color: #FFE600;
+}
+
+.uib-icon--feedback-warning::after {
+  content: "";
+}
+
+.uib-icon--feedback-positive-extra-information::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--feedback-positive-extra-information::after {
+  content: "";
+}
+
+.uib-icon--feedback-positive-extra-information span::before {
+  content: "";
+}
+
+.uib-icon--feedback-warning-extra-information::before {
+  content: "";
+  color: #7F8386;
+}
+
+.uib-icon--feedback-warning-extra-information::after {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--feedback-warning-extra-information span::before {
+  content: "";
+}
+
+.uib-icon--error-extra-information::before {
+  content: "";
+  color: #7F8386;
+}
+
+.uib-icon--error-extra-information::after {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--error-extra-information span::before {
+  content: "";
+}
+
+.uib-icon--notification_disabled::before {
+  content: "";
+}
+
+.uib-icon--notification::before {
+  content: "";
+}
+
+.uib-icon--minus::before {
+  content: "";
+}
+
+.uib-icon--arrow-up::before {
+  content: "";
+}
+
+.uib-icon--arrow-down::before {
+  content: "";
+}
+
+.uib-icon--arrow-right::before {
+  content: "";
+}
+
+.uib-icon--arrow-left::before {
+  content: "";
+}
+
+.uib-icon--overwrite-replace::before {
+  content: "";
+}
+
+.uib-icon--progress::before {
+  content: "";
+}
+
+.uib-icon--bluetooth-pairing::before {
+  content: "";
+}
+
+.uib-icon--search::before {
+  content: "";
+}
+
+.uib-icon--information::before {
+  content: "";
+}
+
+.uib-icon--fault-finding::before {
+  content: "";
+}
+
+.uib-icon--help::before {
+  content: "";
+}
+
+.uib-icon--file-settings::before {
+  content: "";
+}
+
+.uib-icon--online-manuals::before {
+  content: "";
+}
+
+.uib-icon--add-comment::before {
+  content: "";
+}
+
+.uib-icon--information-with-maintenance::before {
+  content: "";
+}
+
+.uib-icon--next-search-result-upcoming::before {
+  content: "";
+}
+
+.uib-icon--last-search-result-upcoming::before {
+  content: "";
+}
+
+.uib-icon--close-search-request::before {
+  content: "";
+}
+
+.uib-icon--close-search-request::after {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--service-tracking::before {
+  content: "";
+}
+
+.uib-icon--complete::before {
+  content: "";
+  color: #7FEE1A;
+}
+
+.uib-icon--complete::after {
+  content: "";
+}
+
+.uib-icon--align-horizontal::before {
+  content: "";
+}
+
+.uib-icon--align-vertical::before {
+  content: "";
+}
+
+.uib-icon--reload::before {
+  content: "";
+}
+
+.uib-icon--menu::before {
+  content: "";
+}
+
+.uib-icon--level-up::before {
+  content: "";
+}
+
+.uib-icon--context-menu::before {
+  content: "";
+}
+
+.uib-icon--zoom-in::before {
+  content: "";
+}
+
+.uib-icon--zoom-out::before {
+  content: "";
+}
+
+.uib-icon--top-level::before {
+  content: "";
+}
+
+.uib-icon--topology::before {
+  content: "";
+}
+
+.uib-icon--single-column::before {
+  content: "";
+}
+
+.uib-icon--double-column::before {
+  content: "";
+}
+
+.uib-icon--multi-column::before {
+  content: "";
+}
+
+.uib-icon--arrow-dropdown::before {
+  content: "";
+}
+
+.uib-icon--arrow-level-down::before {
+  content: "";
+}
+
+.uib-icon--arrow-scroll-up::before {
+  content: "";
+}
+
+.uib-icon--arrow-scroll-down::before {
+  content: "";
+}
+
+.uib-icon--scroll-grip::before {
+  content: "";
+}
+
+.uib-icon--last-event-x-upcoming::before {
+  content: "";
+}
+
+.uib-icon--next-event-x-upcoming::before {
+  content: "";
+}
+
+.uib-icon--sort-ascendant::before {
+  content: "";
+}
+
+.uib-icon--sort-descending::before {
+  content: "";
+}
+
+.uib-icon--mimic::before {
+  content: "";
+}
+
+.uib-icon--filter::before {
+  content: "";
+}
+
+.uib-icon--close-filter::before {
+  content: "";
+}
+
+.uib-icon--close-filter::after {
+  content: "";
+  color: #E6141E;
+}
+
+.uib-icon--close-filter span::before {
+  content: "";
+  color: #FFFFFF;
+}
+
+.uib-icon--close-filter::before {
+  content: "";
+}
+
+.uib-icon--arrow-scroll-left::before {
+  content: "";
+}
+
+.uib-icon--arrow-scroll-right::before {
+  content: "";
+}
+
+.uib-icon--arrow-switch-up::before {
+  content: "";
+}
+
+.uib-icon--time-window::before {
+  content: "";
+}
+
+.uib-icon--time-stretch::before {
+  content: "";
+}
+
+.uib-icon--time-compress::before {
+  content: "";
+}
+
+.uib-icon--window-zoom::before {
+  content: "";
+}
+
+.uib-icon--zoom-original::before {
+  content: "";
+}
+
+.uib-icon--zoom-document-size::before {
+  content: "";
+}
+
+.uib-icon--zoom-document-width::before {
+  content: "";
+}
+
+.uib-icon--scroll-screen-page-up::before {
+  content: "";
+}
+
+.uib-icon--scroll-screen-page-down::before {
+  content: "";
+}
+
+.uib-icon--quickmenu::before {
+  content: "";
+}
+
+.uib-icon--freshair-calibration::before {
+  content: "";
+}
+
+.uib-icon--open-dashboard::before {
+  content: "";
+}
+
+.uib-icon--close-dashboard::before {
+  content: "";
+}
+
+.uib-icon--progress-circle::before {
+  content: "";
+}
+
+.uib-icon--progress-circle::after {
+  content: "";
+  color: #0074FF;
+}
+
+.uib-icon--in-process::before {
+  content: "";
+}
+
+.uib-icon--tail-menu::before {
+  content: "";
+}
+
+.uib-icon--product-finder::before {
+  content: "";
+}
+
+.uib-icon--link-internal::before {
+  content: "";
+}
+
+.uib-icon--link-external::before {
+  content: "";
+}
+
+.uib-icon--total-care::before {
+  content: "";
+}
+
+.uib-icon--extended-care::before {
+  content: "";
+}
+
+.uib-icon--circle-outline::before {
+  content: "";
+}
+
+.uib-icon--detail-slot::before {
+  content: "";
+}
+
+.uib-icon--complete-and-repeat::before {
+  content: "";
+}
+
+.uib-icon--filter-settings::before {
+  content: "";
+}
+
+.uib-icon--focus-element::before {
+  content: "";
+}
+
+.uib-icon--device::before {
+  content: "";
+}
+
+.uib-icon--devices::before {
+  content: "";
+}
+
+.uib-icon--sensors::before {
+  content: "";
+}
+
+.uib-icon--complex-system::before {
+  content: "";
+}
+
+.uib-icon--system::before {
+  content: "";
+}
+
+.uib-icon--miniwarn::before {
+  content: "";
+}
+
+.uib-icon--multiwarn-2::before {
+  content: "";
+}
+
+.uib-icon--pac-3::before {
+  content: "";
+}
+
+.uib-icon--pac-1000-7000::before {
+  content: "";
+}
+
+.uib-icon--pac-ex-2::before {
+  content: "";
+}
+
+.uib-icon--power-guard::before {
+  content: "";
+}
+
+.uib-icon--xam-2000::before {
+  content: "";
+}
+
+.uib-icon--xam-3000::before {
+  content: "";
+}
+
+.uib-icon--xam-5000::before {
+  content: "";
+}
+
+.uib-icon--xam-7000::before {
+  content: "";
+}
+
+.uib-icon--xzone-5000::before {
+  content: "";
+}
+
+.uib-icon--user::before {
+  content: "";
+}
+
+.uib-icon--user-groups::before {
+  content: "";
+}
+
+.uib-icon--vario-guard-sensor::before {
+  content: "";
+}
+
+.uib-icon--vario-guard-control-center::before {
+  content: "";
+}
+
+.uib-icon--ucf-6000-9000::before {
+  content: "";
+}
+
+.uib-icon--x-act-5000::before {
+  content: "";
+}
+
+.uib-icon--p5000::before {
+  content: "";
+}
+
+.uib-icon--p8000::before {
+  content: "";
+}
+
+.uib-icon--user-level-1::before {
+  content: "";
+}
+
+.uib-icon--user-level-2::before {
+  content: "";
+}
+
+.uib-icon--user-level-3::before {
+  content: "";
+}
+
+.uib-icon--user-level-4::before {
+  content: "";
+}
+
+.uib-icon--user-level-5::before {
+  content: "";
+}
+
+.uib-icon--docking-station::before {
+  content: "";
+}
+
+.uib-icon--modul::before {
+  content: "";
+}
+
+.uib-icon--flame5000::before {
+  content: "";
+}
+
+.uib-icon--pir7000::before {
+  content: "";
+}
+
+.uib-icon--x-am-2500::before {
+  content: "";
+}
+
+.uib-icon--interlock::before {
+  content: "";
+}
+
+.uib-icon--controlbox::before {
+  content: "";
+}
+
+.uib-icon--radiocircuit::before {
+  content: "";
+}
+
+.uib-icon--ir::before {
+  content: "";
+}
+
+.uib-icon--docking-station-4::before {
+  content: "";
+}
+
+.uib-icon--docking-station-8::before {
+  content: "";
+}
+
+.uib-icon--user-administrator::before {
+  content: "";
+}
+
+.uib-icon--user-configurator::before {
+  content: "";
+}
+
+.uib-icon--user-maintainer::before {
+  content: "";
+}
+
+.uib-icon--user-operator::before {
+  content: "";
+}
+
+.uib-icon--polytron7000::before {
+  content: "";
+}
+
+.uib-icon--user-training::before {
+  content: "";
+}
+
+.uib-icon--user-trainer::before {
+  content: "";
+}
+
+.uib-icon--monitoring::before {
+  content: "";
+}
+
+.uib-icon--monitoring-1::before {
+  content: "";
+}
+
+.uib-icon--monitoring-2::before {
+  content: "";
+}
+
+.uib-icon--monitoring-3::before {
+  content: "";
+}
+
+.uib-icon--measuring::before {
+  content: "";
+}
+
+.uib-icon--measuring-1::before {
+  content: "";
+}
+
+.uib-icon--measuring-2::before {
+  content: "";
+}
+
+.uib-icon--measuring-3::before {
+  content: "";
+}
+
+.uib-icon--searching::before {
+  content: "";
+}
+
+.uib-icon--searching-1::before {
+  content: "";
+}
+
+.uib-icon--searching-2::before {
+  content: "";
+}
+
+.uib-icon--searching-3::before {
+  content: "";
+}
+
+.uib-icon--x-plore::before {
+  content: "";
+}
+
+.uib-icon--papr::before {
+  content: "";
+}
+
+.uib-icon--halfmask::before {
+  content: "";
+}
+
+.uib-icon--ba-cylinder::before {
+  content: "";
+}
+
+.uib-icon--pulsarIII::before {
+  content: "";
+}
+
+.uib-icon--multigas-cse::before {
+  content: "";
+}
+
+.uib-icon--multigas::before {
+  content: "";
+}
+
+.uib-icon--mobile-device::before {
+  content: "";
+}
+
+.uib-icon--pc-connection::before {
+  content: "";
+}
+
+.uib-icon--x-act-7000::before {
+  content: "";
+}
+
+.uib-icon--docking-station-3::before {
+  content: "";
+}
+
+/*# sourceMappingURL=uib-iconfont.css.map */

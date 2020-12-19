@@ -1,0 +1,127 @@
+<!-- <div class="loginbody_main">
+    <div class="login_bodyinner  d-flex justify-content-center align-items-center">
+        <div class="login_section d-flex  justify-content-center">
+            <div class="login_sectioninner">
+                <div class="login_headingtext text-center">
+                    <h1 class="login_heading_inner1">Drager Safety</h1>
+                    <p class="login_heading_inner2">PDF Quote Packging Tool</p>
+                </div>
+                <div class="login_form mt-5">
+                    <form>
+                        <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User name">
+                        </div>
+                        <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="text-center mt-5">
+                        <button type="submit" class="uib-button uib-button--circular login_heading_btn">OK</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+ 
+      <div class="login_section d-flex  justify-content-center ml-5">
+        <div class="login_sectioninner">
+            <div class="login_headingtext text-center">
+                <h1 class="login_heading_inner1">Drager Safety</h1>
+                <p class="login_heading_inner2">PDF Quote Packging Tool</p>
+            </div>
+            <div class="login_form mt-5">
+                <form>
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User name">
+                    </div>
+                    <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="text-center mt-5">
+                    <button type="submit" class="uib-button uib-button--circular login_heading_btn">OK</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+  </div>
+   
+    </div>
+</div>   -->
+
+
+<div class="login_body">
+    <div class="container login_body_container">
+      <main class="d-flex justify-content-center flex-column  airliquid_main_content">
+           <!-- inner text heading -->
+           
+            <div class="d-flex justify-content-center airliquid_heading">
+              <h4 class="airliquid_inner_text">Choose an option below</h4>
+            </div>
+        <div  class="d-flex flex-column flex-md-row justify-content-center">
+        <!-- inner 1 -->
+        <div class="airliquid_main_inner1">
+          <!-- <div class="uib-snackbar">
+            <div class="uib-snackbar__text">
+              <p class="uib-snackbar__title">Snackbar title</p>
+            </div>
+            <div class="uib-snackbar__buttons"></div>
+          </div> -->
+          <div class="airliquid_content_inner">
+            <h4 class="airliquid_inner_text">Create new quote</h4>
+          </div>
+          <div class="login_content_form">
+            <form [formGroup]="newQuote" (ngSubmit)="selectQuote()">
+                <div class="uib-form-field">
+                    <div class="uib-textfield">
+                      <input
+                        class="uib-textfield__input form-control"
+                        type="text"
+                        placeholder="Air Liquide - PA07302020"
+                        formControlName="quotename"
+                        [ngClass]="{'is-invalid': submitted  && quotevalidate.quotename.errors}"
+                       />
+                      <span class="uib-textfield__validation-icon"></span>
+                    </div>
+                    <div class="quote_createErr"><p class="text-danger pt-1">{{QuoteCreateMsg}}</p></div>
+                  </div>
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary login_submit_btn">OK</button>
+                </div>
+             </form>
+          </div>
+        </div>
+         <!-- inner 2 -->
+         <div class="airliquid_main_inner1">
+            <div class="airliquid_content_inner d-flex justify-content-between">
+              <h4 class="airliquid_inner_text">Select existing quote</h4>
+              <div class="dropdown">
+                <button class="airliquid_dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bars airliquid_dropdown_icon" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Edit list</a>
+                  <a class="dropdown-item" href="#">Open archive</a>
+                </div>
+              </div>
+            </div>
+            <div class="login_content_form">
+             <div class="airliquid_select">
+                <ul class="uib-list arliquid_aside_list">
+                    <!-- <li class="uib-list__item" *ngFor="let existQuote of existQuotes; let i = index" [ngClass]="{'activequote': excerpt[i] == true}" (click)=" slicify(i)" >
+                      <a class="uib-list__link" >{{existQuote}}</a>
+                    </li> -->
+                    <li class="uib-list__item" *ngFor="let existQuote of existQuotes; let i = index" [ngClass]="{'activequote': excerpt[i] == true}" (click)=" slicify(i)" >
+                      <a class="uib-list__link existing_listing" >{{existQuote.quote_name}}</a>
+                    </li>
+                </ul>
+             </div>
+                  <div class="text-center airliquid_select_okbtn">
+                  <button type="submit" class="btn btn-primary login_submit_btn" (click)="selectexistQuote()">OK</button>
+                  </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+</div>
