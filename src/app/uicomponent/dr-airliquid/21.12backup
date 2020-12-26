@@ -1,0 +1,144 @@
+requiredInput(uniqueid,index,file){
+    console.log('check file name *-*',uniqueid,file[0]);
+    if(file[0] === undefined){ 
+      console.log('check 1111',this.userdata);
+      if(this.userdata == "datanotavail"){
+     this.pdfFiles.map((val,index)=>{
+
+      if(val.id && (val.id == 1)){
+        this.aside_covername = "Cover letter";
+      }else if(val.id && (val.id == 2)){
+        this.aside_budgetarname = "Budgetary quote"
+      }
+
+      if(val.id && (val.id == uniqueid)){
+        this.pdfFiles.splice(index,1)
+        this.uistatus = 1;
+      }
+    })
+     }else{
+       if(uniqueid == 1 ){
+         
+        this.aside_covername =  this.pdfFiles[0].original_pdf_name;
+       this.pdfFiles.map((v,i)=>{
+         if(i == 0){
+        delete v.filename;
+         }
+       })
+       this.uistatus = 1;
+      }
+       else if(uniqueid == 2 ){
+         this.aside_budgetarname =  this.pdfFiles[1].original_pdf_name;
+       this.pdfFiles.map((v,i)=>{
+        if(i == 1){
+      //  delete v.original_pdf_name;
+      //  delete v.pdf_id;
+      //  delete v.pdf_type;
+       delete v.filename;
+        }
+      })
+      this.uistatus = 1;
+      }
+      // ------------------- +++++++++++ testing +++++++ ----------------------------
+      this.pdfFiles.map((val,index)=>{
+        if(val.id && (val.id == 100+uniqueid)){
+          this.pdfFiles.splice(index,1)
+          this.uistatus = 1;
+        }
+      })
+     }
+    console.log('check file undefined *-**' ,this.pdfFiles); 
+  }else{
+    console.log('check 22222');
+  // for changing name of cover latter and budgetry quote on aside section 
+  // this.asidename.push(file[0].name);
+  if(uniqueid == 1){this.aside_covername = file[0].name; this.uistatus = 1;}
+  else if(uniqueid == 2){this.aside_budgetarname = file[0].name; this.uistatus = 1;}
+
+ if(this.pdfFiles.length == 0){
+  console.log('check 3333');
+  let uniquevalue = {
+    id:uniqueid,
+    filename:file,
+    pdf_name:"",
+    pdf_type:"",
+    pdf_id:""
+  }
+  this.pdfFiles.push(uniquevalue);
+  this.uistatus = 1;
+  console.log('check one //',this.pdfFiles); 
+ }else{
+  console.log('check 4444');
+ 
+  console.log('check ****ind',index,uniqueid);
+ if(this.userdata == "datanotavail"){
+  let index = this.pdfFiles.findIndex(x => x.id == uniqueid);
+  if( index === -1){
+    console.log('check 555555');
+    console.log('check ur +++++1 ');
+   
+    let uniquevalue = {
+      id:uniqueid,
+      filename:file,
+      pdf_name:"",
+      pdf_type:"",
+      pdf_id:""
+    }
+    this.pdfFiles.push(uniquevalue);
+    this.uistatus = 1;
+    console.log('check 666666',this.pdfFiles);
+  }
+  // now new code
+  else{
+    console.log('check 777777');
+    console.log('+++ check file name *-* new file',this.pdfFiles);
+      if(this.pdfFiles[index].filename || (this.pdfFiles[index].id == 1 || this.pdfFiles[index].id == 2)){  console.log('check 8888888');
+      this.pdfFiles[index].filename = file;
+      this.uistatus = 1;
+    }
+      else{  
+          console.log('--- check file name *-* new file',this.pdfFiles);
+          let uniquevalue = {
+            id:uniqueid,
+            filename:file,
+            pdf_name:"",
+            pdf_type:"",
+            pdf_id:""
+          }
+          this.pdfFiles.push(uniquevalue);
+          this.uistatus = 1;
+      // }
+    }
+  }
+ }else{
+  //  ----------------------------------------------------------------------
+  let elseindex = this.pdfFiles.findIndex(x => x.pdf_type == uniqueid);
+  let elseuniindex = this.pdfFiles.findIndex(x => x.id == this.updateuniquenumber+uniqueid);
+  console.log('-------------------- check my index --',uniqueid,elseindex,elseuniindex);
+if(elseindex == 0){ this.pdfFiles[0].filename = file; this.uistatus = 1;}
+else if(elseindex == 1){this.pdfFiles[1].filename = file;  this.uistatus = 1;}
+else{ 
+  if(elseuniindex == -1){
+    let uniquevalue = {
+      id:this.updateuniquenumber+uniqueid,
+      filename:file,
+      pdf_name:"",
+      pdf_type:"",
+      pdf_id:""
+    }
+    this.pdfFiles.push(uniquevalue); 
+    this.uistatus = 1;
+  }else{
+    this.pdfFiles[elseuniindex].filename = file;
+    this.uistatus = 1;
+  }
+}
+console.log('-------------------- check dataevil --',this.pdfFiles);
+  // ------------------------------------------------------------------------
+ 
+ }
+  // new code close
+      }
+    }
+    // console.log('check file name *-* new file',this.pdfFiles);
+  }
