@@ -75,7 +75,7 @@
                       <input
                         class="uib-textfield__input form-control"
                         type="text"
-                        placeholder="Air Liquide - PA07302020"
+                        placeholder="Enter new quote name"
                         formControlName="quotename"
                         [ngClass]="{'is-invalid': submitted  && quotevalidate.quotename.errors}"
                        />
@@ -93,7 +93,8 @@
          <div class="airliquid_main_inner1">
             <div class="airliquid_content_inner d-flex justify-content-between">
               <h4 class="airliquid_inner_text">Select existing quote</h4>
-              <div class="dropdown">
+              <i (click)="TogpancilIcon()"  class="uib-icon  uib-icon--edit home_aside_inicon"></i>
+              <!-- <div class="dropdown">
                 <button class="airliquid_dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-bars airliquid_dropdown_icon" aria-hidden="true"></i>
                 </button>
@@ -101,7 +102,7 @@
                   <a class="dropdown-item" href="#">Edit list</a>
                   <a class="dropdown-item" href="#">Open archive</a>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="login_content_form">
              <div class="airliquid_select">
@@ -109,8 +110,11 @@
                     <!-- <li class="uib-list__item" *ngFor="let existQuote of existQuotes; let i = index" [ngClass]="{'activequote': excerpt[i] == true}" (click)=" slicify(i)" >
                       <a class="uib-list__link" >{{existQuote}}</a>
                     </li> -->
-                    <li class="uib-list__item" *ngFor="let existQuote of existQuotes; let i = index" [ngClass]="{'activequote': excerpt[i] == true}" (click)=" slicify(i)" >
+                    <li class="uib-list__item d-flex justify-content-between" *ngFor="let existQuote of existQuotes; let i = index" [ngClass]="{'activequote': excerpt[i] == true}" (click)=" slicify(i)" >
                       <a class="uib-list__link existing_listing" >{{existQuote.quote_name}}</a>
+                      <!-- <div class="arliquid_aside_remove"> -->
+                        <button type="button" *ngIf="!hidePencilIcon" (click)="onQuoteremove(existQuote.quote_id,existQuote.quote_name,i)" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+                      <!-- </div> -->
                     </li>
                 </ul>
              </div>

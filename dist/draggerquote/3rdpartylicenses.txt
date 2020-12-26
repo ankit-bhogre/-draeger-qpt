@@ -323,6 +323,9 @@ Apache-2.0
    END OF TERMS AND CONDITIONS
 
 
+primeng
+MIT
+
 rxjs
 Apache-2.0
                                Apache License

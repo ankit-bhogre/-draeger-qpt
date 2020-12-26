@@ -14,6 +14,7 @@ import { HeaderComponent } from './uicomponent/header/header.component';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
   ReactiveFormsModule,
   MatCardModule,
   BrowserAnimationsModule,
-  DragDropModule
+  DragDropModule,
+  ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

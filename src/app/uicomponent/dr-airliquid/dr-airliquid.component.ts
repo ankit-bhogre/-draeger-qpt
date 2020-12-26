@@ -49,6 +49,7 @@ availdatalength;
 newuniquenumber;
 updateuniquenumber;
 uistatus = 0;
+poppupmodel = false;
 //  *********************************************************
 
 onDrop(event: CdkDragDrop<string[]>) {
@@ -143,10 +144,9 @@ oninsertfield(){
     console.log('m new arr', this.uploadpdfField);
   }
 
-
-  // for uploading pdf "Upload PDF document" section
-  requiredInput(uniqueid,index,file){
-    console.log('check file name *-*',uniqueid,file[0]);
+   
+  uploadinfiledata(uniqueid,index,file){
+    console.log('function check file name *-* 9999',uniqueid,file[0]);
     if(file[0] === undefined){ 
       console.log('check 1111',this.userdata);
       if(this.userdata == "datanotavail"){
@@ -290,8 +290,52 @@ console.log('-------------------- check dataevil --',this.pdfFiles);
   // new code close
       }
     }
-    // console.log('check file name *-* new file',this.pdfFiles);
   }
+  testing(){
+    console.log('check +-+-+-+-');
+    (<HTMLInputElement>document.getElementById("checkuserstatus")).click();
+ 
+  }
+  // x; y; z;
+  // replacequote(type){
+   
+  //   if(type == "yes"){
+  //     console.log('check +-+-+-+- 99', this.x,this.y, this.z );
+  //     this.uploadinfiledata(this.x,this.y,this.z);
+  //   }
+  //   if(type == "no"){
+  //     console.log('check +-+-+-+- 99', this.x,type);
+  //     if(this.x == 1){ this.docInputVariable.toArray()[0].nativeElement.value = ''}
+  //     else if(this.x == 2){ this.docInputVariable.toArray()[1].nativeElement.value = ''}
+     
+  //   }
+  // }
+// for uploading pdf "Upload PDF document" section
+
+requiredInput(uniqueid,index,file){
+  console.log('check file name *-*',uniqueid,file[0]);
+      // this.x = uniqueid;
+      // this.y = index;
+      // this.z = file;
+  if(  this.userdata == "datanotavail"){this.uploadinfiledata(uniqueid,index,file);}
+  else{
+    if(this.poppupmodel == false && (uniqueid == 1 || uniqueid  == 2)){
+     
+      console.log('check file name ----+++',uniqueid,file[0]);
+      // (<HTMLInputElement>document.getElementById("checkuserstatus")).click();
+      // ************ Will remove if we will add model true false 
+      this.uploadinfiledata(uniqueid,index,file);
+      // ************
+     
+   
+    }else{
+      this.uploadinfiledata(uniqueid,index,file);
+      this.poppupmodel = true;
+    }
+  }
+ 
+  // console.log('check file name *-* new file',this.pdfFiles);
+}
 
 
    arraymove(arr, fromIndex, toIndex) {

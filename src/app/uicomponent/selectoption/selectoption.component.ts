@@ -16,17 +16,19 @@ export class SelectoptionComponent implements OnInit {
   existQuoteid;
   existuserid;
   existQuotename;
+  hidePencilIcon = true;
+  TogpancilIcon = () => {this.hidePencilIcon = !this.hidePencilIcon}
   // below arry will show api data list
   // existQuotes = ['AdvnSix-PA0252020','AdvnSix-PA0252021','AdvnSix-PA0252022','AdvnSix-PA0252023','AdvnSix-PA0252024'];
   existQuotes = [];
   excerpt: Array<any> = []; // this array used for toggle selected item
   constructor(private fb:FormBuilder,private apiservices:ApiservicesService,private router: Router) { }
+
   ngOnInit(): void {
    this.newQuote = this.fb.group({
       quotename:['',[Validators.required]]
     })
-
-     
+   
     // get quote api
     this.apiservices.get(constant.getquote+this.dummmy_loginid).subscribe((res:any)=>{
       console.log('my data', res);
@@ -40,6 +42,56 @@ export class SelectoptionComponent implements OnInit {
       console.log('my data', this.existQuotes);
     })
   }
+
+       // remove Quote here 
+       
+       onQuoteremove(quoteid,Quotename,indexs){
+        console.log('remove quote by id',quoteid);
+        var removeQuote = new FormData(); 
+        removeQuote.append('user_id',this.dummmy_loginid);
+        removeQuote.append('quote_id', quoteid);
+        this.apiservices.post(constant.deleteQuote,removeQuote).subscribe((res:any)=>{
+          console.log('remove Quote',res);
+          if(res){
+                // get quote api
+            this.apiservices.get(constant.getquote+this.dummmy_loginid).subscribe((res:any)=>{
+              console.log('my data -------------', res);
+              if(res && res.status == false){
+              if(res.error == "No record found."){
+                this.excerpt = [];
+                // this.excerpt[indexs] = !this.excerpt[indexs];
+                this.existQuotes = [];
+                this.apiservices.sharePdf('Quote Name');
+              }
+            }else{
+              this.excerpt = []
+              // this.excerpt[indexs] = !this.excerpt[indexs];
+              this.existQuotes = [];
+              res.map(val=>{
+                this.existQuotes.push(val);
+              })
+              
+              let qtName = localStorage.getItem('quotename');
+              console.log('my new val', qtName,Quotename);
+              // if(qtName == Quotename){ console.log('entered'); this.apiservices.sharePdf('Quote Name');}
+              // ++++++++++++++++++++++++
+              var changeQuotename = new FormData(); 
+              changeQuotename.append('user_id',this.dummmy_loginid);
+              this.apiservices.post(constant.previousquote,changeQuotename).subscribe((res:any)=>{
+                // console.log('data trunck 99999', res);
+                if(res && res.status == true){
+                  this.apiservices.sharePdf(res.quote_name);
+                  }
+              })
+              // ++++++++++++++++++++++++
+            }
+              console.log('my data', this.existQuotes);
+            })
+          }
+
+        })
+      }
+   
   get quotevalidate(){return this.newQuote.controls}
  slicify = (i) => {
                   this.excerpt[i] = !this.excerpt[i];

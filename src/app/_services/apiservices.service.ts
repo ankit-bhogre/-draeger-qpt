@@ -44,6 +44,7 @@ export class ApiservicesService {
       var formData = new FormData(); 
       formData.append('user_id',JSON.stringify(loginId));
       this.post(constant.previousquote,formData).subscribe((res:any)=>{
+        console.log('data trunck', res);
         if(res && res.status == true){
            this.user.next(localStorage.setItem('quotename',res.quote_name)) 
           }
@@ -58,16 +59,26 @@ export class ApiservicesService {
   }
    // for handle unknown error  
    handleError(error) {
+    console.log('err name 000 ++++', error)
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
         // client-side error
         // errorMessage = 'Something wrong with selected PDF.'
-        errorMessage = `Error: ${error.error.message}`;
+        console.log('err name 1', error)
+        if(error.error.type == "error"){ errorMessage = `Error: ${error.error.message}`;}else{ errorMessage = "PDF format is not correct"}
+       
+       
+        
     } else {
         // server-side error
         // errorMessage = 'Something wrong with selected PDF.'
-        errorMessage = error.error.error;
+        console.log('err name 2', error)
+        if(error.error.type == "error"){  errorMessage = error.error.error;}else{ errorMessage = "PDF format is not correct"}
+       
+        
     }
+    console.log('err name 3 ++++', error)
+  
       window.alert(errorMessage);
       return throwError(errorMessage);
       }

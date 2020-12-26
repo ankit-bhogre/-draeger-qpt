@@ -12,7 +12,8 @@ export const constant = {
     "updateQuote" : BASE_URL+"update_selected_quote",
     "showpdf"     : BASE_URL+"pdf_preview",
   "previousquote" : BASE_URL+"previous_quote",
-    "cartdata"    : BASE_URL+"cart_data"
+    "cartdata"    : BASE_URL+"cart_data",
+    "deleteQuote" : BASE_URL+"delete_quote"
 };  
 
 

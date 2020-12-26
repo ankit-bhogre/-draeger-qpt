@@ -12,9 +12,10 @@ urlroute;
 filename ;
 
   constructor(private routes:Router,private apiservice:ApiservicesService) {
+    // this.filename = localStorage.getItem('quotename');
     this.apiservice.castUser.subscribe(res=>{
-      // this.filename = res;
-      this.filename = localStorage.getItem('quotename')
+      this.filename = res;
+      this.filename = localStorage.getItem('quotename');
       console.log('liquid component header', localStorage.getItem('quotename'));
     })
    }
@@ -23,7 +24,8 @@ filename ;
     this.routes.events.subscribe(event=>{
       if(event instanceof NavigationEnd){
         this.urlroute = event.url;
-         if(event.url == '/login' || event.url =='/'){
+        // || event.url =='/'
+         if(event.url == '/login' ){
           this.headerTrue = false;
          }else{
           this.headerTrue = true;
