@@ -37,12 +37,37 @@
                <i  (click)="slicify()" class="uib-icon  uib-icon--edit arliquid_aside_inicon"></i>
            </div>
            <ul class="uib-list arliquid_aside_list">
-            <li class="uib-list__item arliquid_aside_active">
+            <li class="uib-list__item arliquid_aside_active  d-flex  justify-content-between">
               <a class="uib-list__link arliquid_aside_activetext" >{{aside_covername}}</a>
+              <!-- ======  -->
+              <div class="arliquid_aside_remove">
+                <button type="button" *ngIf="!asideCross"  (click)="removeAside('nullbudgetquote','indexhere','mainpdf1')" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+              <div class="uib-drag-handle" *ngIf="asideCross"></div>
+              </div>
+              <!-- ====== -->
             </li>
-            <li class="uib-list__item arliquid_aside_active">
+            <li class="uib-list__item arliquid_aside_active d-flex  justify-content-between">
               <a class="uib-list__link arliquid_aside_activetext">{{aside_budgetarname}}</a>
+               <!-- ======  -->
+               <div class="arliquid_aside_remove">
+                <button type="button" *ngIf="!asideCross"  (click)="removeAside('nullbudgetquote','indexhere','mainpdf2')" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+              <div class="uib-drag-handle" *ngIf="asideCross"></div>
+              </div>
+              <!-- ====== -->
             </li>
+            <!-- ************** -->
+            <!-- <div class="arliquid_aside_remove">
+              <button type="button" *ngIf="!asideCross"  (click)="removeAside()" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+              <button type="button" *ngIf="!asideCross"  (click)="removeAside()" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+            <div class="uib-drag-handle" *ngIf="asideCross"></div>
+            </div> -->
+
+            <!-- <div class="arliquid_aside_remove">
+              <button type="button" *ngIf="!asideCross && todo.original_pdf_name"  (click)="removeAside(todo.id,i,'optionalpdf',todo?.original_pdf_name)" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+              <button type="button" *ngIf="!asideCross && !todo.original_pdf_name"  (click)="removeAside(todo.id,i,'optionalpdf',todo?.filename[0]?.name)" class="uib-button uib-button--circular uib_circle_removebtn"><span class="uib_circle_remove">-</span></button>
+            <div class="uib-drag-handle" *ngIf="asideCross"></div>
+            </div> -->
+            <!-- ************** -->
           </ul>
           <div >
 
