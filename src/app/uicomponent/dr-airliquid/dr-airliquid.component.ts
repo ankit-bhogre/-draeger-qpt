@@ -38,6 +38,7 @@ export class DrAirliquidComponent implements OnInit, DoCheck, OnChanges {
   hitMergeApi = true;
   previreloader = true;
   isProcess = false;
+  noEdit = true;
   storeUploadpdf = [];
   userId;
   quoteId;
@@ -542,7 +543,10 @@ export class DrAirliquidComponent implements OnInit, DoCheck, OnChanges {
     //  }
   }
   // this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl('http://127.0.0.1:8080/'+res.result);
+  switchdocTab(){ this.noEdit = true; }
+
   switchTab() {
+    this.noEdit = false; 
     this.norecorMsg = "";
     console.log('manage state here', this.managestate)
     if (this.uistatus == 0) {

@@ -411,6 +411,20 @@ li.uib-list__item.d-flex.justify-content-between:hover {
 a.uib-list__link.existing_listing:hover {
     background: none !important;
 }
+.quote_list{
+    max-height: calc(100vh - 290px);
+    /* max-height: 300px; */
+    overflow-x: scroll;
+
+}
+.for_height{
+    height: 400px;
+    /* background-color: red; */
+}
+/* .quote_list_inner{
+    max-height: calc(100vh - 275px);
+    max-height: 300px;
+} */
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
